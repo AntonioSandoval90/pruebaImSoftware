@@ -22,4 +22,9 @@ public class StudentController {
 	Collection<StudentDTO> all() {
 		return studentService.findAll();
 	}
+
+	@GetMapping("/students/popular")
+	Collection<StudentDTO> popularSubjects() {
+		return studentService.findAllAndShowIfHaveAPopularSubject();
+	}
 }
